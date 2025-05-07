@@ -102,13 +102,13 @@ export function Navbar({ name }: NavbarProps) {
               >
                 Contact
               </a>
-              <Link
-                to="/tetris"
+              {/*<Link
+                 to="/tetris"
                 className="px-4 py-2 text-sm font-medium rounded-md hover:bg-accent"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Play Tetris
-              </Link>
+              </Link> */}
               <div className="px-4 py-2">
                 <ThemeToggle />
               </div>
