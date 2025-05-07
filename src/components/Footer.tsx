@@ -25,7 +25,7 @@ export function Footer({ name }: FooterProps) {
           <div>
             <h3 className="text-lg font-bold mb-4">{name}</h3>
             <p className="text-sm text-muted-foreground">
-              Computer Engineer specializing in web development, data analysis, and embedded systems.
+              Computer Engineer interessed in web development, data analysis and embedded systems.
             </p>
           </div>
           <div>
@@ -34,7 +34,7 @@ export function Footer({ name }: FooterProps) {
               Feel free to reach out for collaborations or just a friendly chat.
             </p>
             <a 
-              href="mailto:contact@example.com" 
+              href="mailto:lucaspinottibrito@gmail.com" 
               className="text-sm flex items-center gap-2 hover:text-primary transition-colors"
             >
               <Mail className="h-4 w-4" />
