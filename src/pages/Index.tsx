@@ -111,6 +111,36 @@ const Index = () => {
   // Projects data
   const projectsData = [
     {
+      title: "JONAS!",
+      description: "A n8n scheduling agent with AI, that makes appointments via WhatsApp. It uses OpenAI's GPT-4 for natural language understanding, Evolution API for Whatsapp integration, Redis for session management, and PostgreSQL with BaseRow for data storage.",
+      technologies: ["n8n", "OpenAI API", "Evolution API", "Redis", "PostgreSQL", "BaseRow"],
+      icon: "🗓️",
+      imageUrl: "/bot1.png",
+      url: "https://github.com/LucasPinottiBrito/scheduling_agent_n8n"
+    },
+    {
+      title: "EosTOI",
+      description: "EosTOI is an intelligent automation built on Databricks, using Python and Claude AI via API serving endpoints to analyze and validate technical documents.",
+      technologies: ["Databricks (PySpark)", "Serving Endpoints", "Claude", "Decision Trees"],
+      icon: "📄",
+      imageUrl: "/eostoi.png",
+      url: "https://github.com/LucasPinottiBrito/decisionTreeModulePython"
+    },
+    {
+      title: "Hermes Delivery",
+      description: "Full system for managing, analyzing, and sending documents to clients. Includes a web application built with Next.js and Tailwind, a FastAPI backend with PostgreSQL, and a mobile app developed using Power Apps and Power Automate integrated with SharePoint.",
+      technologies: ["Next.js", "Tailwind CSS", "FastAPI", "PostgreSQL", "Power Apps", "Power Automate", "SharePoint"],
+      icon: "🚀",
+      imageUrl: "/frameinternalproject.png",
+    },
+    {
+      title: "Telecommunication Maintenance Mobile App",
+      description: "A mobile application designed to streamline and monitor the entire maintenance workflow for remote telecommunication towers and equipment. It enables technicians to efficiently log activities, track repairs, and access equipment data on-site, even offline.",
+      technologies: ["React Native", "Expo", "SQLite", "TypeORM"],
+      icon: "📡",
+      imageUrl: "/mobile_app.png"
+    },
+    {
       title: "AI Branding SaaS",
       description: "Backend development of a SaaS application for company branding powered by artificial intelligence. The API, built with FastAPI and PostgreSQL, integrates with the ChatGPT API to automatically generate branding proposals based on client-provided data.",
       technologies: ["FastAPI", "PostgreSQL", "OpenAI API"],
@@ -123,6 +153,7 @@ const Index = () => {
       technologies: ["JavaScript", "HTML", "CSS", "WebSockets"],
       icon: "🎥",
       imageUrl: "/cam_app.png",
+      url: "https://github.com/LucasPinottiBrito/cam-app"
     },
     {
       title: "websocket-chat-python",
@@ -130,34 +161,7 @@ const Index = () => {
       technologies: ["Python", "WebSockets"],
       icon: "💬",
       imageUrl: "/websocket.png",
-    },
-    {
-      title: "Hermes Delivery",
-      description: "Full system for managing, analyzing, and sending documents to clients. Includes a web application built with Next.js and Tailwind, a FastAPI backend with PostgreSQL, and a mobile app developed using Power Apps and Power Automate integrated with SharePoint.",
-      technologies: ["Next.js", "Tailwind CSS", "FastAPI", "PostgreSQL", "Power Apps", "Power Automate", "SharePoint"],
-      icon: "🚀",
-      imageUrl: "/frameinternalproject.png",
-    },
-    {
-      title: "PoolWaterQuality",
-      description: "A comprehensive project using ESP8266, Azure Cloud, and Node.js to monitor and control pool water quality.",
-      technologies: ["ESP8266", "Azure Cloud", "Node.js", "JavaScript"],
-      icon: "💧",
-      imageUrl: "/PoolWaterQuality.png",
-    },
-    {
-      title: "Speed IO",
-      description: "A funny web game, where you need to guess the car's speed to win!",
-      technologies: ["Next.js", "Tailwind CSS", "FastAPI", "PostgreSQL"],
-      icon: "🎮",
-      imageUrl: "/speedio_gamescreen.png",
-    },
-    {
-      title: "Telecommunication Maintenance Mobile App",
-      description: "A mobile application designed to streamline and monitor the entire maintenance workflow for remote telecommunication towers and equipment. It enables technicians to efficiently log activities, track repairs, and access equipment data on-site, even offline.",
-      technologies: ["React Native", "Expo", "SQLite", "TypeORM"],
-      icon: "📡",
-      imageUrl: "/mobile_app.png"
+      URL: "https://github.com/LucasPinottiBrito/websocket-chat-python"
     },
   ];
 

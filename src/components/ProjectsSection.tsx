@@ -16,6 +16,7 @@ interface Project {
   technologies: string[];
   icon: string;
   imageUrl: string;
+  url?: string;
 }
 
 interface ProjectsSectionProps {
@@ -58,6 +59,11 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
                         src={project.imageUrl}
                         alt={project.title}
                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        onClick={()=>{
+                          if(project.url){
+                            window.open(project.url, '_blank')
+                          }
+                        }}
                       />
                     </div>
                     <div className="p-6">
