@@ -10,8 +10,9 @@ export const portfolioContent: Record<"en" | "pt", PortfolioContent> = {
     ],
     profile: {
       name: "Lucas Pinotti",
-      role: "Full-Stack Software Engineer",
-      headline: "Full-Stack Software Engineer building web platforms, AI-powered workflows, backend systems and operational tools.",
+      role: "Software Engineer",
+      headline: "",
+      // headline: "Full-Stack Software Engineer building web platforms, AI-powered workflows, backend systems and operational tools.",
       heroDescription: "I turn operational problems into web products, automations, infrastructure and systems that work in practice.",
       about: "I build complete systems for real contexts: internal platforms, ERPs, AI automations, dashboards and integrations. My focus is not stacking technology; it is understanding the problem, reducing noise and delivering a clear, usable and sustainable solution. Frontend, backend, data and AI are tools; the goal is to solve what needs to be solved.",
       email: "lucaspinottibrito@gmail.com",
@@ -184,8 +185,9 @@ export const portfolioContent: Record<"en" | "pt", PortfolioContent> = {
     ],
     profile: {
       name: "Lucas Pinotti",
-      role: "Engenheiro de Software Full-Stack",
-      headline: "Engenheiro de Software Full-Stack criando plataformas web, fluxos com IA, sistemas backend e ferramentas operacionais.",
+      role: "Engenheiro de Software",
+      headline: "",
+      // headline: "Engenheiro de Software Full-Stack criando plataformas web, fluxos com IA, sistemas backend e ferramentas operacionais.",
       heroDescription: "Transformo problemas operacionais em produtos web, automações, infraestrutura e sistemas que funcionam na prática.",
       about: "Crio sistemas completos para contextos reais: plataformas internas, ERPs, automações com IA, dashboards e integrações. Meu foco não é empilhar tecnologia, é entender o problema, reduzir ruído e entregar uma solução clara, utilizável e sustentável. Frontend, backend, dados e IA são ferramentas; o objetivo é resolver o que precisa ser resolvido.",
       email: "lucaspinottibrito@gmail.com",
