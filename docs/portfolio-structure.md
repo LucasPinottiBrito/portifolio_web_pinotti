@@ -4,79 +4,94 @@ This document explains the architecture and maintenance procedures for Lucas Pin
 
 ## 1. Content Architecture
 
-All portfolio content is decoupled from the UI components and lives in:
-- **`src/content/portfolioContent.ts`**: The single source of truth for all text, projects, and metadata.
-- **`src/types/portfolio.ts`**: TypeScript definitions ensuring data consistency.
+All portfolio content is decoupled from UI components and lives in:
 
-### Bilingual Support
-The project uses a React Context (`LanguageContext.tsx`) to manage state between 'en' and 'pt'. The `portfolioContent` object has two main keys: `en` and `pt`, both adhering to the `PortfolioContent` interface.
+- `src/content/portfolioContent.ts`: single source of truth for text, projects, and metadata.
+- `src/content/techStack.ts`: typed list of stack logos used by the skills carousel.
+- `src/types/portfolio.ts`: TypeScript definitions for content consistency.
 
-## 2. Adding a New Project
+## 2. Bilingual Support
 
-To add a project, update both the `en` and `pt` arrays in `src/content/portfolioContent.ts`:
+The project uses `LanguageContext.tsx` to switch between `en` and `pt`. The `portfolioContent` object has two keys, `en` and `pt`, both following the `PortfolioContent` interface.
 
-1.  **Define the Project Object**:
-    ```typescript
-    {
-      id: "my-new-project",
-      title: "Project Title",
-      category: "Backend / AI",
-      status: "Professional / Public",
-      shortDescription: "Brief summary for the card.",
-      fullDescription: "Detailed technical narrative for the modal.",
-      problem: "Business challenge addressed.",
-      solution: "Technical solution implemented.",
-      myRole: "Specific engineering responsibilities.",
-      technologies: ["Python", "FastAPI"],
-      images: [
-        { url: "/projects/my-project/cover.png", alt: "Main view" }
-      ],
-      links: [
-        { label: "GitHub", url: "https://github.com/..." }
-      ],
-      documentSummary: {
-        oneLine: "...",
-        paragraph: "...",
-        bulletPoints: ["...", "..."]
-      }
-    }
-    ```
-2.  **Add Images**: Place project images in `public/projects/[project-id]/`.
-3.  **Confidentiality**: If the project is sensitive, add a `confidentialityNote` string. This will trigger the "Confidential" badge and legal disclaimer.
+Every project text change should be mirrored in both languages.
 
-## 3. Image Management
+## 3. Adding or Updating a Project
 
-- **Location**: `public/projects/`
-- **Recommended Format**: PNG or WebP.
-- **Cover Image**: The first image in the `images` array is used as the card cover.
-- **Aspect Ratio**: Aim for 16:9 for consistent card and modal layouts.
-- **Fallback**: If an image path is broken, the UI will automatically show a stylized technical placeholder.
+Projects now focus on fast scanning and practical value:
 
-## 4. Updating SEO
+- problem
+- solution
+- result
+- technologies
+- images
+- links
+- confidentiality note, when needed
 
-SEO metadata is localized. Update the `seo` block in `portfolioContent.ts`:
-- `title`: Browser tab title.
-- `description`: Meta description for search engines.
-- `ogTitle` / `ogDescription`: Social media preview text.
-- `keywords`: Technical tags for indexing.
+Example:
 
-Dynamic updates are handled by the `Seo.tsx` component via DOM manipulation.
+```typescript
+{
+  id: "my-new-project",
+  title: "Project Title",
+  category: "Operational Platform",
+  status: "Professional / Public",
+  shortDescription: "Brief summary for previews and modal header.",
+  fullDescription: "Short overview for the modal.",
+  problem: "Operational problem or business challenge.",
+  solution: "System, workflow, or product built to address it.",
+  result: "Practical outcome without invented metrics.",
+  features: ["Queue monitoring", "Audit trail"],
+  technologies: ["React", "FastAPI"],
+  images: [
+    { url: "/projects/my-project/cover.png", alt: "Main view" }
+  ],
+  links: [
+    { label: "GitHub", url: "https://github.com/..." }
+  ],
+  confidentialityNote: "Optional note for internal or sensitive projects."
+}
+```
 
-## 5. Development Workflow
+Avoid adding fields that are not rendered or reused by code. The project schema intentionally excludes legacy summary fields and role/responsibility fields that are not shown in the UI.
 
-### Requirements
-- Node.js
-- npm (or bun/pnpm)
+## 4. Image Management
 
-### Commands
+- Location: `public/projects/[project-id]/`
+- Recommended format: PNG or WebP.
+- Cover image: first image in the `images` array, or the image marked with `type: "cover"`.
+- Aspect ratio: 16:9 works well for cards and modals.
+- Fallback: broken image paths render a technical placeholder.
+
+## 5. Stack Logos
+
+Technology logos are listed in `src/content/techStack.ts` and expected under `public/stack/`.
+
+Missing SVG files should not break the layout. The carousel renders a text fallback when a logo is unavailable.
+
+## 6. SEO
+
+SEO metadata is localized in the `seo` block of `portfolioContent.ts`:
+
+- `title`
+- `description`
+- `ogTitle`
+- `ogDescription`
+- `keywords`
+
+Dynamic updates are handled by `Seo.tsx`.
+
+## 7. Development Workflow
+
 | Command | Description |
 | :--- | :--- |
 | `npm run dev` | Start development server with HMR. |
-| `npm run build` | Build for production (outputs to `dist/`). |
+| `npm run build` | Build for production. |
 | `npm run lint` | Run ESLint checks. |
-| `npm run preview` | Locally preview the production build. |
+| `npm run preview` | Preview the production build. |
 
-### Quality Standards
-- Always run `npm run build` before pushing to ensure no TypeScript or build errors.
-- Ensure every text change is mirrored in both `en` and `pt` versions.
-- Adhere to **OKLCH** colors in `index.css` for any new global styles.
+Quality standards:
+
+- Run `npm run build` and `npm run lint` before finishing.
+- Keep confidential projects sanitized.
+- Do not invent metrics or expose internal endpoints, credentials, proprietary API names, or sensitive data.

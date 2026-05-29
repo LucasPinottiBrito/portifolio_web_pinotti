@@ -114,4 +114,9 @@
   .container {
     @apply max-w-7xl mx-auto px-6 md:px-8;
   }
+
+  .tech-stack-marquee {
+    -webkit-mask-image: linear-gradient(to right, transparent, oklch(var(--background)) 8%, oklch(var(--background)) 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, oklch(var(--background)) 8%, oklch(var(--background)) 92%, transparent);
+  }
 }

@@ -17,15 +17,15 @@ export function About({ description }: AboutProps) {
   }, []);
   
   const points = language === 'en' ? [
-    { icon: <Cpu className="h-5 w-5" />, text: "Building AI agents and LLM-powered workflows." },
-    { icon: <Database className="h-5 w-5" />, text: "Scaling data systems with Databricks and Python." },
-    { icon: <Blocks className="h-5 w-5" />, text: "Developing internal operational platforms." },
-    { icon: <Briefcase className="h-5 w-5" />, text: "Architecting robust backend services for business impact." },
+    { icon: <Blocks className="h-5 w-5" />, text: "Building full-stack web platforms and operational tools." },
+    { icon: <Briefcase className="h-5 w-5" />, text: "Designing React, Vite, Next.js and TypeScript interfaces." },
+    { icon: <Cpu className="h-5 w-5" />, text: "Creating AI agents, RAG flows and automation workflows." },
+    { icon: <Database className="h-5 w-5" />, text: "Scaling backend and data systems with FastAPI, SQL and Databricks." },
   ] : [
-    { icon: <Cpu className="h-5 w-5" />, text: "Criando agentes de IA e fluxos baseados em LLM." },
-    { icon: <Database className="h-5 w-5" />, text: "Escalando sistemas de dados com Databricks e Python." },
-    { icon: <Blocks className="h-5 w-5" />, text: "Desenvolvendo plataformas operacionais internas." },
-    { icon: <Briefcase className="h-5 w-5" />, text: "Arquitetando serviços backend robustos com foco em impacto." },
+    { icon: <Blocks className="h-5 w-5" />, text: "Criando plataformas web full-stack e ferramentas operacionais." },
+    { icon: <Briefcase className="h-5 w-5" />, text: "Desenhando interfaces com React, Vite, Next.js e TypeScript." },
+    { icon: <Cpu className="h-5 w-5" />, text: "Criando agentes de IA, fluxos RAG e automações." },
+    { icon: <Database className="h-5 w-5" />, text: "Escalando backend e dados com FastAPI, SQL e Databricks." },
   ];
 
   return (

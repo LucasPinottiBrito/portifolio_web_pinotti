@@ -38,7 +38,7 @@ export function ProjectLinks({ links, isInternal }: ProjectLinksProps) {
           <a href={link.url} target="_blank" rel="noopener noreferrer">
             {getIcon(link.label)}
             <span>{link.label}</span>
-            <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity -ml-1" />
+            {/* <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity -ml-1" /> */}
           </a>
         </Button>
       ))}

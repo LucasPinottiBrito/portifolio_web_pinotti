@@ -5,23 +5,24 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
 import { skillIcons, SkillIconKey } from '../icons/skillIcons';
+import { TechStackCarousel } from './TechStackCarousel';
 
 interface SkillsProps {
   skills: SkillGroup[];
 }
 
 const descriptionMapEn: Record<string, string> = {
-  backend: "High-performance systems and robust business logic.",
+  backend: "Backend services, APIs, data modeling, and full-stack delivery.",
   ai: "Agentic workflows, RAG, and intelligent integrations.",
-  frontend: "Professional interfaces for operational tools.",
+  frontend: "React-based product interfaces with practical UX and design systems.",
   data: "Data platforms, Databricks, and complex pipelines.",
   infra: "Cloud services, integrations, and CI/CD workflows."
 };
 
 const descriptionMapPt: Record<string, string> = {
-  backend: "Sistemas de alta performance e lógica de negócio robusta.",
+  backend: "Serviços backend, APIs, modelagem de dados e entrega full-stack.",
   ai: "Fluxos de agentes, RAG e integrações inteligentes.",
-  frontend: "Interfaces profissionais para ferramentas operacionais.",
+  frontend: "Interfaces de produto em React com UX prática e design systems.",
   data: "Plataformas de dados, Databricks e pipelines complexos.",
   infra: "Serviços em nuvem, integrações e fluxos de CI/CD."
 };
@@ -59,11 +60,13 @@ export function Skills({ skills }: SkillsProps) {
             </h2>
             <p className="max-w-[750px] text-muted-foreground md:text-xl font-medium">
               {language === 'en' 
-                ? 'Core competencies in architecting backend systems, AI agents, and data-driven platforms.' 
-                : 'Competências principais em arquitetura de sistemas backend, agentes de IA e plataformas baseadas em dados.'}
+                ? 'Core competencies across frontend interfaces, backend systems, AI agents, automation, and data-driven platforms.' 
+                : 'Competências principais em interfaces frontend, sistemas backend, agentes de IA, automação e plataformas baseadas em dados.'}
             </p>
           </div>
         </motion.div>
+
+        <TechStackCarousel />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skillGroup, idx) => {

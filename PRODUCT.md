@@ -1,12 +1,12 @@
 # Product Context: Lucas Pinotti Portfolio
 
 ## Users
-- Hiring managers and recruiters looking for backend/automation engineers.
+- Hiring managers and recruiters looking for full-stack engineers with strong backend and automation depth.
 - CTOs/Tech Leads seeking expertise in AI agents and operational platforms.
 - Professional peers in the software engineering community.
 
 ## Product Purpose
-To showcase Lucas Pinotti's professional journey as a high-level Software Engineer, moving away from a student persona to a mature technical expert focused on backend systems, AI agents, and enterprise automation.
+To showcase Lucas Pinotti's professional journey as a high-level Full-Stack Software Engineer, moving away from a student persona to a mature technical expert focused on web platforms, backend systems, AI agents, data platforms, and enterprise automation.
 
 ## Brand Tone
 - **Professional & Technical**: Authoritative but accessible. No fluff.

@@ -22,7 +22,8 @@ const Index = () => {
         <Hero 
           name={content.profile.name}
           title={content.profile.role}
-          description={content.profile.headline}
+          headline={content.profile.headline}
+          description={content.profile.heroDescription}
         />
         
         <About 

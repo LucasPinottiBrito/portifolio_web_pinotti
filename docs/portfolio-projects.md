@@ -1,127 +1,113 @@
 # Portfolio Projects Summary
 
-This document contains professional, bilingual summaries of the projects featured in Lucas Pinotti's portfolio. These descriptions are designed for reuse in resumes, LinkedIn profiles, and professional proposals.
+This document keeps reusable bilingual summaries for the portfolio projects. The presentation now emphasizes problem, solution, result, technologies, images, links, and confidentiality notes where needed.
+
+No project requires a visible "My role" section in the portfolio UI.
 
 ---
 
-## 1. Lysis System
+## 1. NotSheet
 
-### [EN] English
+### EN
+- **Category:** Personal Finance Management Platform
+- **Status:** MVP in Development
+- **Problem:** Many people abandon spreadsheet-based financial tracking because daily registration, card invoices, installments, recurring expenses, imports, and budgets become difficult to maintain.
+- **Solution:** A structured full-stack finance platform with accounts, transactions, cards, budgets, imports, and AI-assisted workflows.
+- **Result:** A functional product foundation for daily financial tracking, combining finance workflows in one application without exposing real user data.
+- **Technologies:** Next.js, React, TypeScript, Tailwind CSS, FastAPI, Python, PostgreSQL, Supabase, Firebase Auth, AI.
+- **Confidentiality:** Demo data and screenshots should use fictional information only.
+
+### PT
+- **Categoria:** Plataforma de Gestão Financeira Pessoal
+- **Status:** MVP em Desenvolvimento
+- **Problema:** Muitas pessoas abandonam controles financeiros por planilhas porque registro diário, faturas, parcelas, recorrências, importações e orçamentos se tornam difíceis de manter.
+- **Solução:** Uma plataforma financeira full-stack com contas, transações, cartões, orçamentos, importações e fluxos apoiados por IA.
+- **Resultado:** Uma base funcional de produto para controle financeiro diário, reunindo os principais fluxos em uma aplicação sem expor dados reais.
+- **Tecnologias:** Next.js, React, TypeScript, Tailwind CSS, FastAPI, Python, PostgreSQL, Supabase, Firebase Auth, IA.
+- **Confidencialidade:** Dados demonstrativos e imagens devem usar informações fictícias.
+
+---
+
+## 2. Lysis System
+
+### EN
 - **Category:** Internal Operational Platform
 - **Status:** Internal / Professional Project
-- **One-line:** An internal operational platform for managing and tracking customer service notes at an electric utility company.
-- **Summary:** The Lysis System is a centralized hub for operational teams at EDP to monitor queues, process service notes, and maintain audit trails. Built with React, Python, FastAPI, and Databricks, it streamlines the workflow for the Irregular Consumption area while maintaining strict data governance.
-- **Responsibilities:** Software engineering, backend/frontend implementation, data integration, and operational workflow modeling.
-- **Features:** Queue monitoring, service notes processing, action history, and audit trails.
+- **Problem:** Operational teams needed to monitor queues, process service notes and keep traceability of actions across an internal workflow.
+- **Solution:** A web platform that centralizes service notes, operational queues, action history, and audit information.
+- **Result:** A centralized platform for managing notes, work queues and action history, improving operational control and auditability.
 - **Technologies:** React, TypeScript, Python, FastAPI, SQL, Databricks, Internal APIs, Operational Dashboards.
-- **Confidentiality:** Due to confidentiality, implementation details, internal data, and proprietary APIs are not disclosed. The description focuses on architecture, responsibilities, and business context.
-- **Resume Bullet Points:**
-  - Architected and implemented a centralized operational platform using React and FastAPI to monitor work queues and process service notes.
-  - Developed robust audit trails and action history logs to ensure traceability in high-stakes utility operations.
-  - Integrated Databricks and internal APIs to streamline data-driven workflows for the Irregular Consumption department.
+- **Confidentiality:** Internal data, implementation details, endpoints, and proprietary APIs are not disclosed.
 
-### [PT] Português
+### PT
 - **Categoria:** Plataforma Operacional Interna
 - **Status:** Projeto Interno / Profissional
-- **Resumo curto:** Uma plataforma operacional interna para gestão e acompanhamento de notas de atendimento em concessionária de energia.
-- **Resumo completo:** O Lysis System é um hub centralizado para as equipes operacionais da EDP acompanharem filas, processarem notas e manterem auditoria. Construído com React, Python, FastAPI e Databricks, ele otimiza o fluxo da área de Consumo Irregular mantendo rigorosa governança de dados.
-- **Responsabilidades:** Engenharia de software, implementação backend/frontend, integração de dados e modelagem do fluxo operacional.
-- **Funcionalidades:** Monitoramento de filas, processamento de notas de atendimento, histórico de ações e trilha de auditoria.
+- **Problema:** Equipes operacionais precisavam acompanhar filas, processar notas e manter rastreabilidade das ações em um fluxo interno.
+- **Solução:** Uma plataforma web que centraliza notas de atendimento, filas operacionais, histórico de ações e informações de auditoria.
+- **Resultado:** Plataforma centralizada para gestão de notas, filas de trabalho e histórico de ações, melhorando controle operacional e auditoria.
 - **Tecnologias:** React, TypeScript, Python, FastAPI, SQL, Databricks, APIs internas, dashboards operacionais.
-- **Confidencialidade:** Por questões de confidencialidade, detalhes de implementação, dados internos e APIs proprietárias não são divulgados. A descrição foca na abordagem arquitetural e no objetivo de negócio.
-- **Bullet Points (Currículo):**
-  - Arquitetou e implementou uma plataforma operacional centralizada usando React e FastAPI para monitoramento de filas e processamento de notas.
-  - Desenvolveu trilhas de auditoria robustas e logs de histórico para garantir rastreabilidade em operações críticas.
-  - Integrou Databricks e APIs internas para otimizar fluxos de trabalho baseados em dados no departamento de Consumo Irregular.
+- **Confidencialidade:** Dados internos, detalhes de implementação, endpoints e APIs proprietárias não são divulgados.
 
 ---
 
-## 2. Databricks Apps Template
+## 3. Databricks Apps Template
 
-### [EN] English
+### EN
 - **Category:** Databricks Architecture Template
 - **Status:** Reusable Template
-- **One-line:** A reusable template architecture for app-to-app communication within Databricks Apps.
-- **Summary:** This project establishes a standardized request chain (Browser -> Frontend -> Backend -> n8n) for Databricks Apps. It provides a solid foundation for future application development, ensuring consistent architectural patterns across new internal tools.
-- **Responsibilities:** Architecture definition, implementation example, and technical standardization.
-- **Features:** Standardized request chain, n8n automation integration, foundation for internal apps.
+- **Problem:** New Databricks Apps needed a reusable communication pattern between frontend, backend and automation services.
+- **Solution:** A reusable template demonstrating a complete request chain across browser, frontend app, backend app, and n8n app.
+- **Result:** A standardized Browser -> Frontend App -> Backend App -> n8n App template that accelerates the creation of new internal applications.
 - **Technologies:** Databricks Apps, React, TypeScript, Python, FastAPI, n8n, API Integration.
-- **Resume Bullet Points:**
-  - Defined a standardized architecture for Databricks Apps, establishing a consistent communication pattern between frontend, backend, and automation layers.
-  - Implemented a reusable request chain template (Browser -> React -> FastAPI -> n8n) to accelerate the development of future internal tools.
-  - Standardized technical implementation patterns to improve maintainability and scalability of data-centric applications.
+- **Confidentiality:** The template does not expose sensitive business data.
 
-### [PT] Português
+### PT
 - **Categoria:** Template de Arquitetura Databricks
 - **Status:** Template Reutilizável
-- **Resumo curto:** Template reutilizável de arquitetura para comunicação entre aplicações dentro do Databricks Apps.
-- **Resumo completo:** Este projeto estabelece uma cadeia de requisição padronizada (Browser -> Frontend -> Backend -> n8n) para Databricks Apps. Ele fornece uma fundação sólida para desenvolvimento futuro, garantindo padrões consistentes.
-- **Responsabilidades:** Definição de arquitetura, implementação do exemplo e padronização técnica.
-- **Funcionalidades:** Cadeia de requisição padronizada, integração com automação n8n, base para apps internos.
+- **Problema:** Novos Databricks Apps precisavam de um padrão reutilizável de comunicação entre frontend, backend e automações.
+- **Solução:** Um template reutilizável demonstrando a cadeia completa entre browser, frontend app, backend app e n8n app.
+- **Resultado:** Template padronizado com cadeia Browser -> Frontend App -> Backend App -> n8n App, acelerando a criação de novas aplicações internas.
 - **Tecnologias:** Databricks Apps, React, TypeScript, Python, FastAPI, n8n, integração de APIs.
-- **Bullet Points (Currículo):**
-  - Definiu uma arquitetura padronizada para Databricks Apps, estabelecendo um padrão consistente de comunicação entre as camadas de frontend, backend e automação.
-  - Implementou um template de cadeia de requisição reutilizável (Browser -> React -> FastAPI -> n8n) para acelerar o desenvolvimento de ferramentas internas.
-  - Padronizou padrões técnicos de implementação para melhorar a manutenibilidade e escalabilidade de aplicações focadas em dados.
+- **Confidencialidade:** O template não expõe dados sensíveis de negócio.
 
 ---
 
-## 3. TalkTOI
+## 4. TalkTOI
 
-### [EN] English
+### EN
 - **Category:** AI Assistant / RAG Platform
 - **Status:** Internal / Professional Project
-- **One-line:** An AI-powered RAG assistant for in-person customer service support.
-- **Summary:** TalkTOI empowers customer service teams by answering complex operational questions using a Retrieval-Augmented Generation (RAG) and agent-based architecture. It integrates with internal APIs and vector search to provide contextual, highly accurate answers based on company knowledge bases.
-- **Responsibilities:** Architecture design, agent workflow definition, backend integration, RAG/tooling strategy, and implementation support.
-- **Features:** Agent-based architecture, tool-based retrieval, integration with internal knowledge bases.
+- **Problem:** Customer service teams needed to consult complex internal information and contextual data during in-person service.
+- **Solution:** An AI assistant combining RAG, agent skills and tool-based searches for contextual operational support.
+- **Result:** An AI assistant with RAG and search tools that supports faster answers and more consistent operational consultations.
 - **Technologies:** Python, FastAPI, Databricks Model Serving, RAG, AI Agents, Internal APIs, Vector Search, Tool-based Retrieval.
-- **Confidentiality:** Due to confidentiality, internal data sources, APIs, prompts, and implementation details are not disclosed. The description focuses on the architectural approach and business purpose.
-- **Resume Bullet Points:**
-  - Designed an AI assistant using a RAG (Retrieval-Augmented Generation) architecture to support customer service operations with complex queries.
-  - Developed an agent-based system capable of performing structured searches through internal APIs and vector databases.
-  - Implemented AI tooling strategy using Databricks Model Serving and FastAPI to deliver contextual information in real-time.
+- **Confidentiality:** Internal data sources, APIs, prompts and implementation details are not disclosed.
 
-### [PT] Português
+### PT
 - **Categoria:** Assistente de IA / Plataforma RAG
 - **Status:** Projeto Interno / Profissional
-- **Resumo curto:** Um assistente RAG com Inteligência Artificial para suporte ao atendimento presencial ao cliente.
-- **Resumo completo:** O TalkTOI empodera as equipes de atendimento ao responder questões operacionais complexas utilizando RAG (Retrieval-Augmented Generation) e uma arquitetura de agentes. Integra-se com APIs internas e busca vetorial para fornecer respostas precisas com base no conhecimento da empresa.
-- **Responsabilidades:** Desenho de arquitetura, definição do fluxo do agente, integração backend, estratégia de RAG/tools e apoio na implementação.
-- **Funcionalidades:** Arquitetura baseada em agentes, recuperação baseada em ferramentas, integração com bases internas de conhecimento.
+- **Problema:** Equipes de atendimento precisavam consultar informações internas complexas e dados contextuais durante o atendimento presencial.
+- **Solução:** Um assistente de IA que combina RAG, skills de agente e buscas baseadas em ferramentas para suporte operacional contextual.
+- **Resultado:** Assistente com IA, RAG e ferramentas de busca que apoia respostas mais rápidas e consultas operacionais mais consistentes.
 - **Tecnologias:** Python, FastAPI, Databricks Model Serving, RAG, agentes de IA, APIs internas, busca vetorial, recuperação baseada em ferramentas.
-- **Confidencialidade:** Por questões de confidencialidade, fontes internas, APIs, prompts e detalhes de implementação não são divulgados. A descrição foca na abordagem arquitetural e no objetivo de negócio.
-- **Bullet Points (Currículo):**
-  - Projetou um assistente de IA usando arquitetura RAG para apoiar operações de atendimento ao cliente em consultas complexas.
-  - Desenvolveu um sistema baseado em agentes capaz de realizar buscas estruturadas em APIs internas e bancos de dados vetoriais.
-  - Implementou a estratégia de ferramentas de IA utilizando Databricks Model Serving e FastAPI para entregar informações contextuais em tempo real.
+- **Confidencialidade:** Fontes internas, APIs, prompts e detalhes de implementação não são divulgados.
 
 ---
 
-## 4. SIM ERP
+## 5. SIM ERP
 
-### [EN] English
+### EN
 - **Category:** SaaS ERP Platform
 - **Status:** Product Project / In Development
-- **One-line:** A multi-company SaaS ERP system specifically built for optical stores.
-- **Summary:** SIM ERP provides an end-to-end operational platform for optical stores, handling everything from clinical prescriptions and scheduling to inventory and finance. Designed with a multi-tenant architecture, it leverages a FastAPI backend and React frontend to deliver robust data scoping and business workflows.
-- **Responsibilities:** Full-stack development, backend architecture, frontend implementation, authentication, data modeling, and SaaS workflow design.
-- **Features:** Multi-company scoping, clinical prescriptions, scheduling, inventory management, finance, dashboards, and CSV export.
+- **Problem:** Optical stores need to manage sales, customers, products, scheduling, prescriptions, inventory and finance in an integrated system.
+- **Solution:** A multi-company SaaS ERP with scoped data access, operational modules, dashboards, and CSV import/export.
+- **Result:** A multi-company SaaS ERP with operational modules, dashboards, authentication, CSV import/export and a functional base for commercial, clinical and administrative operations.
 - **Technologies:** FastAPI, React, TypeScript, PostgreSQL, JWT, Multi-tenant SaaS, Dashboards, CSV Import/Export.
-- **Resume Bullet Points:**
-  - Developed a full-stack multi-tenant SaaS ERP for optical stores using FastAPI, React, and PostgreSQL.
-  - Designed complex data models and workflows for clinical prescriptions, inventory control, and financial management.
-  - Implemented secure multi-company scoping and JWT-based authentication to ensure data isolation and security in a SaaS environment.
 
-### [PT] Português
+### PT
 - **Categoria:** Plataforma ERP SaaS
 - **Status:** Projeto de Produto / Em Desenvolvimento
-- **Resumo curto:** Um ERP SaaS multiempresa desenvolvido especificamente para óticas.
-- **Resumo completo:** O SIM ERP fornece uma plataforma operacional de ponta a ponta para óticas, lidando desde prescrições clínicas a finanças. Desenhado em uma arquitetura multi-tenant, ele utiliza backend em FastAPI e frontend em React para entregar fluxos robustos e escopo de dados seguro.
-- **Responsabilidades:** Desenvolvimento full-stack, arquitetura backend, implementação frontend, autenticação, modelagem de dados e desenho dos fluxos SaaS.
-- **Funcionalidades:** Escopo multiempresa, receituários clínicos, agenda, controle de estoque, financeiro, dashboards e exportação CSV.
+- **Problema:** Óticas precisam gerenciar vendas, clientes, produtos, agenda, receituários, estoque e financeiro em um sistema integrado.
+- **Solução:** Um ERP SaaS multiempresa com escopo de dados, módulos operacionais, dashboards e importação/exportação CSV.
+- **Resultado:** ERP SaaS multiempresa com módulos operacionais, dashboards, autenticação, importação/exportação CSV e base funcional para operação comercial, clínica e administrativa.
 - **Tecnologias:** FastAPI, React, TypeScript, PostgreSQL, JWT, SaaS multiempresa, dashboards, importação/exportação CSV.
-- **Bullet Points (Currículo):**
-  - Desenvolveu um ERP SaaS multi-tenant completo para óticas utilizando FastAPI, React e PostgreSQL.
-  - Projetou modelos de dados complexos e fluxos de trabalho para prescrições clínicas, controle de estoque e gestão financeira.
-  - Implementou escopo seguro multi-empresa e autenticação baseada em JWT para garantir isolamento de dados e segurança em ambiente SaaS.

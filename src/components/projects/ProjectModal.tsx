@@ -12,7 +12,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { ProjectGallery } from './ProjectGallery';
 import { ProjectLinks } from './ProjectLinks';
 import { ProjectStatusBadge } from './ProjectStatusBadge';
-import { ShieldCheck, CheckCircle2, ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface ProjectModalProps {
@@ -27,21 +27,19 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   if (!project) return null;
 
   const t = {
-    overview: language === 'en' ? 'Project Overview' : 'Visão Geral do Projeto',
-    problem: language === 'en' ? 'The Problem' : 'O Problema',
-    solution: language === 'en' ? 'The Solution' : 'A Solução',
-    myRole: language === 'en' ? 'My Engineering Role' : 'Meu Papel na Engenharia',
-    highlights: language === 'en' ? 'Project Highlights' : 'Destaques do Projeto',
-    features: language === 'en' ? 'Key Technical Components' : 'Componentes Técnicos Principais',
-    technologies: language === 'en' ? 'Tech Stack' : 'Stack Tecnológica',
+    overview: language === 'en' ? 'Overview' : 'Visão geral',
+    problem: language === 'en' ? 'Problem' : 'Problema',
+    solution: language === 'en' ? 'Solution' : 'Solução',
+    result: language === 'en' ? 'Result' : 'Resultado',
+    features: language === 'en' ? 'Features' : 'Funcionalidades',
+    technologies: language === 'en' ? 'Technologies' : 'Tecnologias',
+    images: language === 'en' ? 'Images' : 'Imagens',
+    links: language === 'en' ? 'Links' : 'Links',
     confidentiality: language === 'en' ? 'Confidentiality' : 'Confidencialidade',
-    resources: language === 'en' ? 'Resources & Links' : 'Recursos e Links',
-    close: language === 'en' ? 'Close' : 'Fechar',
     openProject: language === 'en' ? 'Open Project' : 'Abrir Projeto',
   };
 
-  // Find primary link (GitHub or first link)
-  const primaryLink = project.links?.find(l => l.label.toLowerCase().includes('github')) || project.links?.[0];
+  const primaryLink = project.links?.find((link) => link.label.toLowerCase().includes('github')) || project.links?.[0];
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -49,7 +47,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         <DialogHeader className="p-8 pb-6 border-b bg-zinc-50 dark:bg-zinc-900 relative">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="space-y-4 flex-grow">
-              <ProjectStatusBadge status={project.status} />
+              <ProjectStatusBadge status={project.status} confidential={!!project.confidentialityNote} />
               <div className="space-y-1">
                 <span className="text-xs font-mono text-primary uppercase tracking-widest font-semibold">
                   {project.category}
@@ -59,7 +57,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                 </DialogTitle>
               </div>
             </div>
-            
+
             {primaryLink && (
               <div className="flex-shrink-0 pt-2 md:pt-0">
                 <Button className="gap-2 px-6 shadow-lg group bg-primary text-primary-foreground hover:bg-primary/90" asChild>
@@ -75,92 +73,82 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             {project.shortDescription}
           </DialogDescription>
         </DialogHeader>
-        
+
         <ScrollArea className="flex-grow bg-white dark:bg-black">
           <div className="p-8 space-y-12 pb-16">
             <div className="grid lg:grid-cols-12 gap-12">
-               {/* Left Column: Technical Narrative (8 cols) */}
-               <div className="lg:col-span-8 space-y-12">
-                  <section className="space-y-4">
-                    <h4 className="text-[10px] font-mono text-primary uppercase tracking-[0.3em] font-bold">{t.overview}</h4>
-                    <p className="text-zinc-900 dark:text-zinc-100 text-lg md:text-xl leading-relaxed whitespace-pre-wrap font-medium">{project.fullDescription}</p>
-                  </section>
-                  
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <section className="space-y-4 p-7 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900">
-                      <h4 className="text-sm font-bold flex items-center gap-2.5 text-zinc-950 dark:text-white uppercase tracking-tight">
-                         <div className="h-2 w-2 rounded-full bg-primary" />
-                         {t.problem}
-                      </h4>
-                      <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">{project.problem}</p>
-                    </section>
-                    <section className="space-y-4 p-7 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900">
-                      <h4 className="text-sm font-bold flex items-center gap-2.5 text-zinc-950 dark:text-white uppercase tracking-tight">
-                         <div className="h-2 w-2 rounded-full bg-emerald-500" />
-                         {t.solution}
-                      </h4>
-                      <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">{project.solution}</p>
-                    </section>
-                  </div>
+              <div className="lg:col-span-8 space-y-10">
+                <section className="space-y-4">
+                  <h4 className="text-[10px] font-mono text-primary uppercase tracking-[0.3em] font-bold">{t.overview}</h4>
+                  <p className="text-zinc-900 dark:text-zinc-100 text-lg leading-relaxed whitespace-pre-wrap font-medium">
+                    {project.fullDescription}
+                  </p>
+                </section>
 
+                <div className="grid gap-5">
+                  <section className="space-y-3 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 dark:border-zinc-800 dark:bg-zinc-900">
+                    <h4 className="text-sm font-bold uppercase tracking-tight text-zinc-950 dark:text-white">{t.problem}</h4>
+                    <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">{project.problem}</p>
+                  </section>
+                  <section className="space-y-3 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 dark:border-zinc-800 dark:bg-zinc-900">
+                    <h4 className="text-sm font-bold uppercase tracking-tight text-zinc-950 dark:text-white">{t.solution}</h4>
+                    <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">{project.solution}</p>
+                  </section>
+                  <section className="space-y-3 rounded-2xl border border-primary/20 bg-primary/5 p-5">
+                    <h4 className="text-sm font-bold uppercase tracking-tight text-zinc-950 dark:text-white">{t.result}</h4>
+                    <p className="text-sm md:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed font-semibold">{project.result}</p>
+                  </section>
+                </div>
+
+                {project.features && project.features.length > 0 && (
                   <section className="space-y-5">
-                    <h4 className="text-[10px] font-mono text-primary uppercase tracking-[0.3em] font-bold">{t.myRole}</h4>
-                    <p className="text-zinc-900 dark:text-zinc-100 text-lg leading-relaxed font-medium">{project.myRole}</p>
-                  </section>
-
-                  {project.features && project.features.length > 0 && (
-                    <section className="space-y-6">
-                      <h4 className="text-[10px] font-mono text-primary uppercase tracking-[0.3em] font-bold">{t.features}</h4>
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        {project.features.map((feature, i) => (
-                          <div key={i} className="flex items-center gap-4 text-sm font-semibold text-zinc-700 dark:text-zinc-300 p-4 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 hover:border-primary/20 transition-colors">
-                             <div className="h-1.5 w-1.5 rounded-full bg-primary/40" />
-                             {feature}
-                          </div>
-                        ))}
-                      </div>
-                    </section>
-                  )}
-               </div>
-
-               {/* Right Column: Visuals & Links (4 cols) */}
-               <div className="lg:col-span-4 space-y-12">
-                  <section className="space-y-4">
-                    <h4 className="text-[10px] font-mono text-primary uppercase tracking-[0.3em] font-bold">{language === 'en' ? 'Visuals' : 'Visuais'}</h4>
-                    <ProjectGallery images={project.images} />
-                  </section>
-
-                  <section className="space-y-5">
-                     <h4 className="text-[10px] font-mono text-primary uppercase tracking-[0.3em] font-bold">{t.technologies}</h4>
-                     <div className="flex flex-wrap gap-2">
-                       {project.technologies.map((tech, i) => (
-                         <span key={i} className="text-[10px] font-mono font-bold text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 px-3 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-700">
-                           {tech}
-                         </span>
-                       ))}
-                     </div>
-                  </section>
-
-                  <section className="space-y-5">
-                    <h4 className="text-[10px] font-mono text-primary uppercase tracking-[0.3em] font-bold">{t.resources}</h4>
-                    <ProjectLinks links={project.links} isInternal={!!project.confidentialityNote} />
-                  </section>
-
-                  {project.confidentialityNote && (
-                    <div className="p-7 rounded-[2rem] border border-amber-500/20 bg-amber-500/5 space-y-4 relative overflow-hidden group">
-                      <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                         <ShieldCheck className="w-12 h-12 text-amber-500" />
-                      </div>
-                      <div className="flex items-center gap-2.5 text-amber-500 relative z-10">
-                         <ShieldCheck className="h-5 w-5" />
-                         <span className="text-sm font-bold uppercase tracking-widest">{t.confidentiality}</span>
-                      </div>
-                      <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed italic font-medium relative z-10">
-                         {project.confidentialityNote}
-                      </p>
+                    <h4 className="text-[10px] font-mono text-primary uppercase tracking-[0.3em] font-bold">{t.features}</h4>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {project.features.map((feature) => (
+                        <div key={feature} className="flex items-center gap-3 rounded-xl border border-zinc-200 bg-zinc-50 p-3 text-sm font-semibold text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300">
+                          <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary/60" />
+                          {feature}
+                        </div>
+                      ))}
                     </div>
-                  )}
-               </div>
+                  </section>
+                )}
+              </div>
+
+              <div className="lg:col-span-4 space-y-10">
+                <section className="space-y-4">
+                  <h4 className="text-[10px] font-mono text-primary uppercase tracking-[0.3em] font-bold">{t.images}</h4>
+                  <ProjectGallery images={project.images} />
+                </section>
+
+                <section className="space-y-5">
+                  <h4 className="text-[10px] font-mono text-primary uppercase tracking-[0.3em] font-bold">{t.technologies}</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="text-[10px] font-mono font-bold text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 px-3 py-1.5 rounded-full border border-zinc-200 dark:border-zinc-700">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </section>
+
+                <section className="space-y-5">
+                  <h4 className="text-[10px] font-mono text-primary uppercase tracking-[0.3em] font-bold">{t.links}</h4>
+                  <ProjectLinks links={project.links} isInternal={!!project.confidentialityNote} />
+                </section>
+
+                {project.confidentialityNote && (
+                  <div className="p-6 rounded-2xl border border-amber-500/20 bg-amber-500/5 space-y-4 relative overflow-hidden group">
+                    <div className="flex items-center gap-2.5 text-amber-500 relative z-10">
+                      <ShieldCheck className="h-5 w-5" />
+                      <span className="text-sm font-bold uppercase tracking-widest">{t.confidentiality}</span>
+                    </div>
+                    <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed italic font-medium relative z-10">
+                      {project.confidentialityNote}
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </ScrollArea>

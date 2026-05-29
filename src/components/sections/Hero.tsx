@@ -1,18 +1,19 @@
 import React, { useEffect, useRef } from 'react';
 import { setupIntersectionObserver } from '@/lib/utils';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Terminal } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from "framer-motion";
 
 interface HeroProps {
   name: string;
   title: string;
+  headline: string;
   description: string;
   image?: string;
 }
 
-export function Hero({ name, title, description }: HeroProps) {
+export function Hero({ name, title, headline, description }: HeroProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const { language } = useLanguage();
   
@@ -45,11 +46,14 @@ export function Hero({ name, title, description }: HeroProps) {
           </div>
           
           <div className="space-y-4">
+            <p className="text-sm font-mono font-bold uppercase tracking-[0.2em] text-primary">
+              {title}
+            </p>
             <h1 className="text-5xl font-extrabold tracking-[0.01em] sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-foreground">
               {name}
             </h1>
             <h2 className="text-2xl font-bold text-primary sm:text-3xl md:text-4xl lg:text-5xl tracking-tight max-w-[700px] leading-tight">
-              {title}
+              {headline}
             </h2>
           </div>
           
@@ -60,7 +64,7 @@ export function Hero({ name, title, description }: HeroProps) {
           <div className="flex flex-col sm:flex-row gap-5 pt-6">
             <Button size="lg" className="h-14 px-8 text-base gap-2.5 group rounded-full shadow-lg shadow-primary/20" asChild>
               <a href="#projects">
-                {language === 'en' ? 'View Systems' : 'Ver Sistemas'}
+                {language === 'en' ? 'View Projects' : 'Ver Projetos'}
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1.5" />
               </a>
             </Button>

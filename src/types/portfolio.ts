@@ -1,7 +1,5 @@
 export type SupportedLanguage = "en" | "pt";
 
-export type LocalizedString = string;
-
 export interface NavigationItem {
   id: string;
   label: string;
@@ -12,6 +10,7 @@ export interface ProfileContent {
   name: string;
   role: string;
   headline: string;
+  heroDescription: string;
   about: string;
   email: string;
   github: string;
@@ -35,13 +34,6 @@ export interface ProjectImage {
 export interface ProjectLink {
   label: string;
   url: string;
-  icon?: string;
-}
-
-export interface ProjectDocumentSummary {
-  oneLine: string;
-  paragraph: string;
-  bulletPoints: string[];
 }
 
 export interface Project {
@@ -53,14 +45,12 @@ export interface Project {
   fullDescription: string;
   problem: string;
   solution: string;
-  myRole: string;
-  highlights?: string[];
+  result: string;
   features?: string[];
   technologies: string[];
   images: ProjectImage[];
   links?: ProjectLink[];
   confidentialityNote?: string;
-  documentSummary: ProjectDocumentSummary;
 }
 
 export interface SeoContent {
@@ -74,7 +64,6 @@ export interface SeoContent {
 }
 
 export interface PortfolioContent {
-  language: SupportedLanguage;
   navigation: NavigationItem[];
   profile: ProfileContent;
   skills: SkillGroup[];
