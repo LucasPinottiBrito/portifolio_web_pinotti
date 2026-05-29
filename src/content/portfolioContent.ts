@@ -90,7 +90,7 @@ export const portfolioContent: Record<"en" | "pt", PortfolioContent> = {
             url: "https://app-notsheet.vercel.app"
           }
         ],
-        confidentialityNote: "This is a personal project currently in development and does not expose real user financial data. Screenshots and demo data should use fictional information only.",
+        // confidentialityNote: "This is a personal project currently in development and does not expose real user financial data. Screenshots and demo data should use fictional information only.",
       },
       {
         id: "lysis-system",
@@ -123,7 +123,7 @@ export const portfolioContent: Record<"en" | "pt", PortfolioContent> = {
         links: [
           { label: "GitHub", url: "https://github.com/LucasPinottiBrito/databricks_apps_request_template" }
         ],
-        confidentialityNote: "This project is intended as a reusable technical template and does not expose sensitive business data.",
+        // confidentialityNote: "This project is intended as a reusable technical template and does not expose sensitive business data.",
       },
       {
         id: "talktoi",
@@ -155,7 +155,7 @@ export const portfolioContent: Record<"en" | "pt", PortfolioContent> = {
         links: [
           { label: "GitHub", url: "https://github.com/LucasPinottiBrito/sim_erp" }
         ],
-        confidentialityNote: "This is a product/project case study. Business-sensitive implementation details may be omitted when necessary.",
+        // confidentialityNote: "This is a product/project case study. Business-sensitive implementation details may be omitted when necessary.",
       }
     ],
     seo: {
@@ -265,7 +265,7 @@ export const portfolioContent: Record<"en" | "pt", PortfolioContent> = {
             url: "https://app-notsheet.vercel.app"
           }
         ],
-        confidentialityNote: "Este projeto é uma aplicação própria em desenvolvimento e não expõe dados financeiros reais de usuários. Imagens e dados demonstrativos devem utilizar informações fictícias.",
+        // confidentialityNote: "Este projeto é uma aplicação própria em desenvolvimento e não expõe dados financeiros reais de usuários. Imagens e dados demonstrativos devem utilizar informações fictícias.",
       },
       {
         id: "lysis-system",
@@ -300,7 +300,7 @@ export const portfolioContent: Record<"en" | "pt", PortfolioContent> = {
         links: [
           { label: "GitHub", url: "https://github.com/LucasPinottiBrito/databricks_apps_request_template" }
         ],
-        confidentialityNote: "Este projeto funciona como template técnico reutilizável e não expõe dados sensíveis de negócio.",
+        // confidentialityNote: "Este projeto funciona como template técnico reutilizável e não expõe dados sensíveis de negócio.",
       },
       {
         id: "talktoi",
@@ -334,7 +334,7 @@ export const portfolioContent: Record<"en" | "pt", PortfolioContent> = {
         links: [
           { label: "GitHub", url: "https://github.com/LucasPinottiBrito/sim_erp" }
         ],
-        confidentialityNote: "Este é um case de produto/projeto. Detalhes sensíveis de negócio podem ser omitidos quando necessário.",
+        // confidentialityNote: "Este é um case de produto/projeto. Detalhes sensíveis de negócio podem ser omitidos quando necessário.",
       }
     ],
     seo: {
