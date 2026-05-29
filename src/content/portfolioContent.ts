@@ -141,6 +141,161 @@ export const portfolioContent: Record<"en" | "pt", PortfolioContent> = {
         confidentialityNote: "Due to confidentiality, internal data sources, APIs, prompts and implementation details are not disclosed. The description focuses on the architectural approach and business purpose.",
       },
       {
+        id: "whagent",
+        title: "Whagent",
+        category: "WhatsApp AI Agent Management Platform",
+        status: "MVP",
+        shortDescription: "A SaaS platform for managing WhatsApp AI agents that qualify leads, identify customer interests and support sales teams with conversation context.",
+        fullDescription: "Whagent is a SaaS platform designed to manage AI agents for WhatsApp customer service. The MVP was focused on a car dealership use case, where the agent talks to potential customers, identifies their interests, classifies lead temperature and organizes the conversation context so sales representatives can follow up with better information. The platform includes a dashboard, backend services, CRM simulation, asynchronous message processing and AI integration.",
+        problem: "Car dealerships and marketing agencies often receive many WhatsApp conversations but struggle to classify leads, understand customer intent, identify buying readiness and hand off useful context to sales teams.",
+        solution: "A full-stack platform that connects WhatsApp conversations, AI-based lead classification, CRM-like data and a dashboard for monitoring leads, conversations and sales opportunities.",
+        result: "The MVP provided a structured way to transform WhatsApp conversations into qualified sales opportunities, helping sellers approach customers with more context about their interests and previous interaction.",
+        technologies: [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Radix UI",
+          "FastAPI",
+          "Python",
+          "SQLAlchemy",
+          "Alembic",
+          "PostgreSQL",
+          "Redis",
+          "OpenAI API",
+          "PyJWT",
+          "Docker",
+          "Docker Compose",
+          "Docker Swarm",
+          "Recharts"
+        ],
+        images: [
+          {
+            url: "/projects/whagent/whagent_dash.png",
+            alt: "Whagent dashboard preview"
+          },
+          {
+            url: "/projects/whagent/whagent.png",
+            alt: "Whagent"
+          }
+        ],
+        links: [
+          {
+            label: "GitHub",
+            url: "https://github.com/LucasPinottiBrito/whagent"
+          }
+        ],
+        // confidentialityNote: "This project should use fictional dealership, customer and lead data in screenshots or demos."
+      },
+      {
+        id: "docassist",
+        title: "DocAssist",
+        category: "WhatsApp AI Agent for Healthcare Scheduling",
+        status: "Tested MVP",
+        shortDescription: "A WhatsApp AI agent MVP for clinics, designed to answer patients and handle appointment scheduling through a simpler n8n-based orchestration.",
+        fullDescription: "DocAssist is a WhatsApp AI agent project created for dental and medical clinics. Unlike more complex SaaS architectures, this MVP used a simpler infrastructure centered around n8n orchestration, connecting conversational flows, AI responses and scheduling actions. The project was tested in a dental clinic for 30 days, where the agent was able to answer patients and perform appointment scheduling during the validation period.",
+        problem: "Small clinics often rely on manual WhatsApp service for answering patients, checking available times and scheduling appointments, which can create delays and consume administrative time.",
+        solution: "A lightweight WhatsApp AI agent architecture using n8n as the orchestration layer, connecting conversation handling, AI responses and appointment scheduling workflows.",
+        result: "During a 30-day test in a dental clinic, the agent was able to handle patient conversations and schedule appointments normally, validating the core automation flow in a real environment.",
+        technologies: [
+          "React",
+          "Vite",
+          "TypeScript",
+          "FastAPI",
+          "Python",
+          "n8n",
+          "OpenAI API",
+          "Google Calendar",
+          "MCP",
+          "WhatsApp Integration"
+        ],
+        images: [
+          {
+            url: "/projects/docassist/docassist_dash.png",
+            alt: "DocAssist Dashboard Preview"
+          },
+          {
+            url: "/projects/docassist/docassist_landing.png",
+            alt: "DocAssist Landing Page Preview"
+          },
+        ],
+        links: [
+          {
+            label: "Frontend Repository",
+            url: "https://github.com/LucasPinottiBrito/DocAssist_frontend"
+          },
+          {
+            label: "Backend Repository",
+            url: "https://github.com/LucasPinottiBrito/DocAssist_backend"
+          }
+        ],
+        // confidentialityNote: "Healthcare-related screenshots and demos should use fictional patient, clinic and scheduling data only."
+      },
+      {
+        id: "decision-tree-module",
+        title: "Decision Tree Module",
+        category: "Python Module for Visual Rule Modeling",
+        status: "Academic & Professional Utility",
+        shortDescription: "A Python module for creating visual and functional decision trees to model complex conditional processes.",
+        fullDescription: "Decision Tree Module is a Python module created to represent complex conditional flows as visual and functional decision trees. It allows custom conditions to be organized as nodes, supports prediction over structured data and provides a visual representation of the decision path, making complex business rules easier to explain, validate and maintain.",
+        problem: "Complex conditional processes can be difficult to explain, validate and maintain when they are represented only as code, spreadsheets or informal documentation.",
+        solution: "A reusable Python module that converts conditional logic into a visual and functional decision tree, allowing rules to be tested against structured data and explained through a clear visual flow.",
+        result: "The module was used to describe complex internal business processes, helping organize classification rules and making the decision sequence easier to explain and validate.",
+        technologies: [
+          "Python",
+          "Pandas",
+          "Decision Trees",
+          "DataFrame Processing",
+          "Rule-Based Logic",
+          "Data Visualization"
+        ],
+        images: [
+          {
+            url: "/projects/decisionTreeModule/decisionTree.png",
+            alt: "Decision Tree Module visual tree preview"
+          }
+        ],
+        links: [
+          {
+            label: "GitHub",
+            url: "https://github.com/LucasPinottiBrito/decisionTreeModulePython"
+          }
+        ],
+        // confidentialityNote: "Any examples based on professional use should be sanitized and should not expose internal business rules or sensitive operational data."
+      },
+      {
+        id: "triage-robot-mvp",
+        title: "Triage Robot MVP",
+        category: "Medical Triage AI Agent",
+        status: "Academic MVP",
+        shortDescription: "An academic AI agent MVP that conducts a medical triage conversation and generates a structured patient record.",
+        fullDescription: "Triage Robot MVP is an academic project created for the Computer Engineering Projects I course. The system was designed as a medical triage agent that receives a patient’s complaints, conducts a structured conversation, asks relevant follow-up questions and generates a complete patient record at the end of the interaction.",
+        problem: "Initial triage in emergency care requires collecting patient complaints, symptoms and context in a structured way, but this process can be repetitive and time-sensitive.",
+        solution: "A conversational AI agent that guides the patient through a triage flow, asks relevant questions based on the reported symptoms and organizes the collected information into a structured medical record.",
+        result: "In tests, the agent interacted effectively with patients, collected their reports, asked pertinent questions and generated a structured record in around five minutes.",
+        technologies: [
+          "Python",
+          "AI Agents",
+          "LLM API",
+          "Prompt Engineering",
+          "Conversational Flow",
+          "Structured Output"
+        ],
+        images: [
+          {
+            url: "/projects/triage-robot-mvp/cover.png",
+            alt: "Triage Robot MVP conversation preview"
+          }
+        ],
+        links: [
+          {
+            label: "GitHub",
+            url: "https://github.com/LucasPinottiBrito/triage_robot_mvp"
+          }
+        ],
+        // confidentialityNote: "This is an academic prototype. Any demo content should use fictional patient information only."
+      },
+      {
         id: "sim-erp",
         title: "SIM ERP",
         category: "SaaS ERP Platform",
@@ -318,6 +473,161 @@ export const portfolioContent: Record<"en" | "pt", PortfolioContent> = {
           // { label: "GitHub", url: "https://github.com/LucasPinottiBrito" }
         ],
         confidentialityNote: "Por questões de confidencialidade, fontes internas, APIs, prompts e detalhes de implementação não são divulgados. A descrição foca na abordagem arquitetural e no objetivo de negócio.",
+      },
+      {
+        id: "whagent",
+        title: "Whagent",
+        category: "Plataforma SaaS de Gestão de Agentes de IA para WhatsApp",
+        status: "MVP",
+        shortDescription: "Plataforma SaaS para gerenciar agentes de IA no WhatsApp que qualificam leads, identificam interesses dos clientes e apoiam equipes de vendas com contexto da conversa.",
+        fullDescription: "O Whagent é uma plataforma SaaS criada para gerenciar agentes de IA para atendimento via WhatsApp. O MVP foi focado em um caso de uso para concessionárias de veículos, em que o agente conversa com potenciais clientes, identifica seus interesses, classifica a temperatura do lead e organiza o contexto da conversa para que vendedores possam dar continuidade com melhores informações. A plataforma inclui dashboard, serviços backend, simulação de CRM, processamento assíncrono de mensagens e integração com IA.",
+        problem: "Concessionárias de veículos e agências de marketing frequentemente recebem muitas conversas pelo WhatsApp, mas têm dificuldade para classificar leads, entender a intenção do cliente, identificar prontidão de compra e repassar contexto útil para as equipes de vendas.",
+        solution: "Uma plataforma full-stack que conecta conversas do WhatsApp, classificação de leads com IA, dados em formato de CRM e um dashboard para acompanhar leads, conversas e oportunidades de venda.",
+        result: "O MVP ofereceu uma forma estruturada de transformar conversas do WhatsApp em oportunidades comerciais qualificadas, ajudando vendedores a abordar clientes com mais contexto sobre seus interesses e interações anteriores.",
+        technologies: [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Radix UI",
+          "FastAPI",
+          "Python",
+          "SQLAlchemy",
+          "Alembic",
+          "PostgreSQL",
+          "Redis",
+          "OpenAI API",
+          "PyJWT",
+          "Docker",
+          "Docker Compose",
+          "Docker Swarm",
+          "Recharts"
+        ],
+        images: [
+          {
+            url: "/projects/whagent/whagent_dash.png",
+            alt: "Prévia do dashboard do Whagent"
+          },
+          {
+            url: "/projects/whagent/whagent.png",
+            alt: "Whagent"
+          }
+        ],
+        links: [
+          {
+            label: "GitHub",
+            url: "https://github.com/LucasPinottiBrito/whagent"
+          }
+        ],
+        // confidentialityNote: "Este projeto deve usar dados fictícios de concessionária, clientes e leads em screenshots ou demonstrações."
+      },
+      {
+        id: "docassist",
+        title: "DocAssist",
+        category: "Agente de IA no WhatsApp para Agendamento em Saúde",
+        status: "MVP Testado",
+        shortDescription: "MVP de agente de IA no WhatsApp para clínicas, criado para atender pacientes e realizar agendamentos por meio de uma orquestração mais simples baseada em n8n.",
+        fullDescription: "O DocAssist é um projeto de agente de IA para WhatsApp criado para clínicas odontológicas e médicas. Diferente de arquiteturas SaaS mais complexas, este MVP utilizou uma infraestrutura mais simples centrada na orquestração com n8n, conectando fluxos conversacionais, respostas com IA e ações de agendamento. O projeto foi testado em uma clínica odontológica por 30 dias, período em que o agente conseguiu atender pacientes e realizar agendamentos.",
+        problem: "Clínicas pequenas frequentemente dependem de atendimento manual pelo WhatsApp para responder pacientes, verificar horários disponíveis e marcar consultas, o que pode gerar atrasos e consumir tempo administrativo.",
+        solution: "Uma arquitetura leve de agente de IA para WhatsApp usando n8n como camada de orquestração, conectando atendimento conversacional, respostas com IA e fluxos de agendamento.",
+        result: "Durante um teste de 30 dias em uma clínica odontológica, o agente conseguiu conduzir conversas com pacientes e agendar consultas normalmente, validando o fluxo central de automação em um ambiente real.",
+        technologies: [
+          "React",
+          "Vite",
+          "TypeScript",
+          "FastAPI",
+          "Python",
+          "n8n",
+          "OpenAI API",
+          "Google Calendar",
+          "MCP",
+          "Integração WhatsApp"
+        ],
+        images: [
+          {
+            url: "/projects/docassist/docassist_dash.png",
+            alt: "Prévia do dashboard do DocAssist"
+          },
+          {
+            url: "/projects/docassist/docassist_landing.png",
+            alt: "Prévia da landing page do DocAssist"
+          },
+        ],
+        links: [
+          {
+            label: "Repositório Frontend",
+            url: "https://github.com/LucasPinottiBrito/DocAssist_frontend"
+          },
+          {
+            label: "Repositório Backend",
+            url: "https://github.com/LucasPinottiBrito/DocAssist_backend"
+          }
+        ],
+        // confidentialityNote: "Capturas de tela e demonstrações relacionadas à área de saúde devem usar apenas dados fictícios de pacientes, clínicas e agendamentos."
+      },
+      {
+        id: "decision-tree-module",
+        title: "Decision Tree Module",
+        category: "Módulo Python para Modelagem Visual de Regras",
+        status: "Utilitário Acadêmico e Profissional",
+        shortDescription: "Módulo Python para criar árvores de decisão visuais e funcionais para modelar processos condicionais complexos.",
+        fullDescription: "Decision Tree Module é um módulo Python criado para representar fluxos condicionais complexos como árvores de decisão visuais e funcionais. Ele permite organizar condições customizadas como nós, suporta predição sobre dados estruturados e fornece uma representação visual do caminho de decisão, tornando regras de negócio complexas mais fáceis de explicar, validar e manter.",
+        problem: "Processos condicionais complexos podem ser difíceis de explicar, validar e manter quando são representados apenas como código, planilhas ou documentação informal.",
+        solution: "Um módulo Python reutilizável que converte lógica condicional em uma árvore de decisão visual e funcional, permitindo testar regras contra dados estruturados e explicá-las por meio de um fluxo visual claro.",
+        result: "O módulo foi usado para descrever processos internos complexos de negócio, ajudando a organizar regras de classificação e tornando a sequência de decisão mais fácil de explicar e validar.",
+        technologies: [
+          "Python",
+          "Pandas",
+          "Árvores de Decisão",
+          "Processamento com DataFrame",
+          "Lógica baseada em regras",
+          "Visualização de dados"
+        ],
+        images: [
+          {
+            url: "/projects/decisionTreeModule/decisionTree.png",
+            alt: "Prévia de árvore visual do Decision Tree Module"
+          }
+        ],
+        links: [
+          {
+            label: "GitHub",
+            url: "https://github.com/LucasPinottiBrito/decisionTreeModulePython"
+          }
+        ],
+        // confidentialityNote: "Exemplos baseados em uso profissional devem ser sanitizados e não devem expor regras internas de negócio ou dados operacionais sensíveis."
+      },
+      {
+        id: "triage-robot-mvp",
+        title: "Triage Robot MVP",
+        category: "Agente de IA para Triagem Médica",
+        status: "MVP Acadêmico",
+        shortDescription: "MVP acadêmico de agente de IA que conduz uma conversa de triagem médica e gera uma ficha estruturada do paciente.",
+        fullDescription: "Triage Robot MVP é um projeto acadêmico criado para a disciplina Projetos em Engenharia da Computação I. O sistema foi desenvolvido como um agente de triagem médica que recebe queixas do paciente, conduz uma conversa estruturada, faz perguntas complementares relevantes e gera uma ficha completa ao final da interação.",
+        problem: "A triagem inicial em atendimentos de emergência exige coletar queixas, sintomas e contexto do paciente de forma estruturada, mas esse processo pode ser repetitivo e sensível ao tempo.",
+        solution: "Um agente conversacional de IA que guia o paciente por um fluxo de triagem, faz perguntas relevantes com base nos sintomas relatados e organiza as informações coletadas em uma ficha médica estruturada.",
+        result: "Nos testes, o agente interagiu de forma efetiva com pacientes, coletou seus relatos, fez perguntas pertinentes e gerou uma ficha estruturada em cerca de cinco minutos.",
+        technologies: [
+          "Python",
+          "Agentes de IA",
+          "LLM API",
+          "Engenharia de Prompt",
+          "Fluxo conversacional",
+          "Saída estruturada"
+        ],
+        images: [
+          {
+            url: "/projects/triage-robot-mvp/cover.png",
+            alt: "Prévia de conversa do Triage Robot MVP"
+          }
+        ],
+        links: [
+          {
+            label: "GitHub",
+            url: "https://github.com/LucasPinottiBrito/triage_robot_mvp"
+          }
+        ],
+        // confidentialityNote: "Este é um protótipo acadêmico. Qualquer conteúdo demonstrativo deve usar apenas informações fictícias de pacientes."
       },
       {
         id: "sim-erp",
