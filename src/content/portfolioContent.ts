@@ -16,7 +16,7 @@ export const portfolioContent: Record<"en" | "pt", PortfolioContent> = {
       about: "I build complete systems for real contexts: internal platforms, ERPs, AI automations, dashboards and integrations. My focus is not stacking technology; it is understanding the problem, reducing noise and delivering a clear, usable and sustainable solution. Frontend, backend, data and AI are tools; the goal is to solve what needs to be solved.",
       email: "lucaspinottibrito@gmail.com",
       github: "https://github.com/LucasPinottiBrito",
-      linkedin: "https://www.linkedin.com/in/lucas-pinotti-de-brito-53b947204/",
+      linkedin: "https://www.linkedin.com/in/lucaspinotti",
     },
     skills: [
       {
@@ -190,7 +190,7 @@ export const portfolioContent: Record<"en" | "pt", PortfolioContent> = {
       about: "Crio sistemas completos para contextos reais: plataformas internas, ERPs, automações com IA, dashboards e integrações. Meu foco não é empilhar tecnologia, é entender o problema, reduzir ruído e entregar uma solução clara, utilizável e sustentável. Frontend, backend, dados e IA são ferramentas; o objetivo é resolver o que precisa ser resolvido.",
       email: "lucaspinottibrito@gmail.com",
       github: "https://github.com/LucasPinottiBrito",
-      linkedin: "https://www.linkedin.com/in/lucas-pinotti-de-brito-53b947204/",
+      linkedin: "https://www.linkedin.com/in/lucaspinotti",
     },
     skills: [
       {
